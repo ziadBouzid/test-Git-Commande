@@ -13,7 +13,7 @@ app.use(express.json());
 });*/
 
 app.use(bodyParser.urlencoded());
-
+app.use(express.urlencoded({ extended : false}));
 app.get('/create',(req,res)=>{
   res.send(`
     <form method='post' action='/create-nom'><input type='text' name='nom'/>
